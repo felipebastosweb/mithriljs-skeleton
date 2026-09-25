@@ -1,15 +1,16 @@
 import m from "mithril"
 
 export class Textarea {
-    constructor(self) {
-        this.id = self.id
-        this.name = self.name
-        this.cols = self.cols
-        this.rows = self.rows
-        this.value = self.value
-        this.placeholder = self.placeholder
+    constructor(vnode) {
+        this.id = vnode.id
+        this.name = vnode.name
+        this.cols = vnode.cols
+        this.rows = vnode.rows
+        this.value = vnode.value
+        this.placeholder = vnode.placeholder;
+        this.body = [];
     }
-    view() {
+    view(vnode) {
         return m("textarea.form-control", {
             id: this.id,
             name: this.name,
@@ -17,6 +18,6 @@ export class Textarea {
             rows: this.rows,
             value: this.content,
             placeholder: this.placeholder,
-        })
+        }, this.body)
     }
 }

@@ -2,7 +2,7 @@ import m from "mithril"
 import { FormInput } from "../core/Form"
 //import { CartItem } from "../models/Cart"
 
-export class CartItemForm {
+export class CartItem {
     constructor(self) {
         //this.CartItem = self.CartItem
         this.CartItem = {}
